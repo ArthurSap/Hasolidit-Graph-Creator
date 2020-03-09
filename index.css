@@ -1,0 +1,8 @@
+.cy-title {
+    text-align: center;
+    font-size: 26px;
+    width: 350px;
+    overflow-wrap: normal;
+    color: #613c04;
+    /* color: darkcyan; */
+}
