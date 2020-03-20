@@ -35,7 +35,7 @@ Change the `initialLink` in `graphCreator.js` to be whatever you want, and run t
 This will generate a new `res.json` you can use. Do note you need to change the initial link in `index.js` too.
 
 If you want to change the layout of the graph simply change it in `index.js` at
-```
+```javascript
 document.getElementById('cy').addEventListener('dataavailable', function(e) { /* your new layout goes here */ }
 ```
 
@@ -46,3 +46,12 @@ document.getElementById('cy').addEventListener('dataavailable', function(e) { /*
 * "Random" button doesn't work.
 * Generating the `res.json` is completly independant from presenting it.
 * Code looks ugly.
+
+## Road-map
+1. Fix the issues with clicking on an edge.
+   1. Clicking on an edge of a selected vertex should pan in on the opposite one (if `source` is selected should pan in on `target` on vice versa).
+   2. The same should happen on a vertex that is distinctly currently panned in, even if not selected.
+2. Find a way to detect `unselect`ing of vertices in order to preform the `unselectCurrent` action and change the color of the edges. Otherwise it will remain colored forever and ever.
+3. Find a convenient layout to present the graph. A logical ordering of the vertices.
+4. Think of a way to space out the edges so it will be easier to follow the posts.
+5. Consider adding a modal that will pop-up on every double click/tap on a vertex. The modal should present the text of the post and a link directing to it.
