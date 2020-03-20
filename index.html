@@ -5,14 +5,15 @@
 <head>
     <meta charset='utf-8'></meta>
     <title>Playground</title>
-    <!-- <link href='normalize.css' rel='stylesheet' type='text/css' />
-    <link href='skeleton.css' rel='stylesheet' type='text/css' /> -->
     <script src='https://cdnjs.cloudflare.com/ajax/libs/cytoscape/3.14.0/cytoscape.min.js'></script>
     <script src='node_modules/cytoscape-node-html-label/dist/cytoscape-node-html-label.js'></script>
-    <!-- <script src='https://unpkg.com/micromodal/dist/micromodal.min.js'></script> -->
     <script src='index.js'></script>
+
+    <script src="https://unpkg.com/dagre/dist/dagre.js"></script>
+    <script src="node_modules/cytoscape-dagre/cytoscape-dagre.js"></script>
+
     <link rel='stylesheet' href="index.css" type="text/css">
-</head>
+
 
 <style>
     #cy {
@@ -22,16 +23,28 @@
         top: 0px;
         left: 0px;
     }
-    #advance {
-        width: 20%;
-        height: 10%;
+
+    #file-input {
         position: absolute;
         top: 5%;
+        right: 0%;
+    }
+    #auto-lock {
+        position: absolute;
+        top: 10%;
+        right: 5%;
+    }
+    #randomize {
+        position: absolute;
+        top: 15%;
         right: 5%;
     }
 </style>
+</head>
 
 <body>
     <div id='cy'></div>
-    <input type='button' id='advance' value='Next Step'>      
+    <input type='file' id='file-input'>
+    <input type='button' id='auto-lock' value='Unlock'>
+    <input type='button' id='randomize' value='Randomize'> 
 </body>

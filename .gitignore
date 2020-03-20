@@ -86,3 +86,10 @@ typings/
 
 # DynamoDB Local files
 .dynamodb/
+
+# Playground backup
+res.*.json
+*external*sites*
+
+# Minified currently un-needed
+*.min.js

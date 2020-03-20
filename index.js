@@ -1,84 +1,29 @@
+/*jshint esversion: 6 */
 "use stirct";
+let cy;
 
-var GlyElements = {
-    nodes: [
-      {
-        data: {
-          id: 0,
-          title: '15 עצות סולידיות לבני 20+',
-          text: `2.התמקדו בהכנסות
-          חלק לא מבוטל מהקוראים הצעירים שמזדמנים לבלוג ולפורום הזה מקבלים את הרושם המוטעה שכדי להגיע לעצמאות כלכלית במהירות הבזק הם חייבים להפוך לגאוני השקעות ולהשיג תשואה מקסימלית על חסכונותיהם.
-          
-          הבעיה עם הגישה הזו היא, ובכן, שלרוב בני ה-20 אין חסכונות משמעותיים. המשמעות היא שגם אם המשקיע הצעיר יקצור תשואות פנומנליות, רווחי ההון יהיו באפן כללי צנועים מכדי לקדם אותו באופן משמעותי לעבר חופש כלכלי.
-          
-          אם תשקיעו, למשל, 20,000 ₪ בקרן מחקה ותשיגו תשואה נטו של 5% בשנה נתונה, הרווח (במונחים שקליים) מיתרגם ל-1,000 ₪ בלבד. אם תשקיעו 2,000 ₪ במניה אחת שתכפיל את ערכה תוך שנה, הרווח יהיה 2,000 ₪ בלבד (לפני עמלות ומסים).
-          
-          כשאתם בתחילת הדרך, המוקד צריך להיות הגדלת ההכנסה, ולא מיקסום התשואה.  שכר גבוה בגיל צעיר יקדם אתכם לעבר חופש כלכלי הרבה יותר מאשר תשואה פנומנלית על סכום זעיר. לכן, השקיעו בטיפוח ההון האנושי ופוטנציאל ההשתכרות שלכם. רכשו מיומנויות חדשות ומבוקשות, צברו ניסיון מעשי וקשרים רלוונטיים, ונסו למצוא דרכים חדשות לגרום לאנשים לשלם לכם עבור כל כישרון שיש לכם להציע.
-          
-          זכרו: שוק המניות מתגמל סבלנות בטווח הארוך. שוק העבודה, לעומתו, מתגמל נדירות בטווח הקצר. אם יש לכם מיומנות נדירה שהביקוש עבורה גבוה תוכלו להגדיל דרמטית את הסיכויים למצוא משרה  עם שכר גבוה כבר בשנות העשרים שלכם.
-          
-          תכנות היא דוגמה טובה. לא רק שמדובר במיומנות נדירה, מבוקשת ומתגמלת כלכלית, אלא שאדם נחוש דיו יכול ללמד את עצמו לתכנת ולהגיע תוך מספר חודשים מרמת ידע אפסית לעבודה במשרה מלאה. נקודת פתיחה טובה נמצאת, למשל, כאן.
-          
-          מכל מקום – אל תתעלמו מהשיקול הכלכלי בהחלטה אם ללמוד, מה ללמוד והיכן ללמוד.  השאיפה היא לרכוש מיומנות נדרשת, מעשית, שאנשים ישלמו בעדה.  אל תשרפו 3 שנים על לימודים בחוגים כמו מגדר, קרימינולוגיה או ארכיאולוגיה אשורית. אין כל רע אינהרנטי בלימודים בחוגים הללו – אך מדובר בלוקסוס עבור אנשים כמוני, שיכולים להרשות את זה לעצמם. החוגים הללו אינם מיועדים לסטודנטים תפרנים בתחילת שנות העשרים שלהם. בוער ללמוד משהו? השקיעו את הזמן והכסף ברישיון נהיגה על אוטובוס, בקורס רתכות או, כאמור, בלימודי שפת תכנות.  לימודי אכדית עתיקה היו משאת נפשכם מאז ומעולם?  סבבה – כל עוד אתם ערוכים להתמודד עם השלכות הכלכליות של ההחלטות שלכם.`,
-          url: 'https://www.hasolidit.com/15-%d7%a2%d7%a6%d7%95%d7%aa-%d7%a1%d7%95%d7%9c%d7%99%d7%93%d7%99%d7%95%d7%aa-%d7%9c%d7%91%d7%a0%d7%99-20'
-        }
-      }, {
-        data: {
-          id: 1,
-          title: 'Post 2',
-          text: 'Text for post 2',
-          url: 'https://en.wikipedia.org/wiki/Glucose_6-phosphate'
-        }
-      }, {
-        data: {
-          id: 2,
-          title: 'Post 3',
-          text: 'Text for post 3',
-          url: 'https://en.wikipedia.org/wiki/Fructose_6-phosphate'
-        }
-      }, {
-        data: {
-          id: 3,
-          title: 'Post 4',
-          text: 'Text for post 4',
-          url: 'https://en.wikipedia.org/wiki/Fructose_1,6-bisphosphate'
-        }
-      }
-    ],
-    edges: [
-      {
-        data: {
-          source: 0,
-          target: 1
-        }
-      }, {
-        data: {
-          source: 0,
-          target: 2
-        }
-      }, {
-        data: {
-          source: 2,
-          target: 3
-        }
-      }, {
-        data: {
-          source: 1,
-          target: 2
-        }
-      }, {
-        data: {
-            source: 2,
-            target: 1
-        }
-      }
-    ]
+function readSingleFile(e) {
+  let file = e.target.files[0];
+  if(!file) {
+    console.log('No file supplied');
+    return;
+  }
+  let reader = new FileReader();
+  reader.onload = function(e) {
+    let contents = e.target.result;
+    cy.json(JSON.parse(contents));
+    let element = document.getElementById('cy');
+    let event = document.createEvent("HTMLEvents");
+    event.initEvent("dataavailable", true, true);
+    event.eventName = "dataavailable";
+    element.dispatchEvent(event);
   };
+  reader.readAsText(file);
+}
 
 document.addEventListener("DOMContentLoaded", function() {
-    var cy = cytoscape({
+    cy = cytoscape({
       container: document.getElementById('cy'),
-      elements: GlyElements,
       style: [
         {
           selector: 'node',
@@ -102,97 +47,110 @@ document.addEventListener("DOMContentLoaded", function() {
             'curve-style': 'bezier',
             'width': '6px',
             'target-arrow-shape': 'triangle',
-            'control-point-step-size': '140px'
+            'control-point-step-size': '200px',
+            'line-color': 'grey',
+            'target-arrow-color': 'grey'
           }
         }
       ],
-      layout: {
-        name: 'grid',
-        fit: false, // it's okay if some of the graph is hidden off-screen because viewport scrolls
-        columns: 3,
-        avoidOverlap: true,
-        avoidOverlapPadding: 80,
-      }
     });
-
-    cy.nodeHtmlLabel([{
-      'query': 'node',
-      'valign': 'center',
-      tpl: function(data) {
-        return '<div class="cy-title" dir="rtl">' + data.title + '</div>';
-      }
-    }]);
-  
-    cy.autolock(true);
   
     function panIn(target) {
       cy.animate({
         fit: {
           eles: target,
-          padding: 360
+          padding: 200
         },
         duration: 700,
         easing: 'ease',
         queue: true
       });
     }
-  
-    // function findSuccessor(selected) {
-    //   var connectedNodes;
-    //   if (selected.isEdge()) {
-    //     connectedNodes = selected.target();
-    //   } else {
-    //     connectedNodes = selected.outgoers().nodes();
-    //   }
-    //   var successor = connectedNodes.max(function(ele) {
-    //     return Number(ele.id());
-    //     // Need to use Number; otherwise, id() provide string
-    //     // which messes up comparison (says that "10" < "9")
-  
-    //     // max returns object with value and ele
-    //   });
-    //   return successor.ele;
-    // }
-  
-    // function advanceByButton(previous) {
-    //   // unselecting is not strictly necessary since cy defaults to single selection
-    //   previous.unselect();
-    //   var nextSelect = findSuccessor(previous);
-    //   if (previous.id() === cy.nodes('#10').id()) {
-    //     // loop back to beginning instead of repeating pyruvate
-    //     nextSelect = cy.nodes('#0');
-    //   }
-    //   nextSelect.select();
-    //   panIn(nextSelect);
-    // }
-  
-    var advanceButton = document.getElementById('advance');
-    advanceButton.addEventListener('click', function() {
-      var previous = cy.$(':selected');
-      advanceByButton(previous);
-    });
+
+    document.getElementById('file-input').addEventListener('change', readSingleFile, false);
+
+    const unseslectCurrent = () => {
+      const current = cy.$('node:selected');
+      current.incomers().animate({ style: { lineColor: "grey", targetArrowColor: "grey" } });
+      current.outgoers().edges().animate({ style: { lineColor: "grey", targetArrowColor: "grey" } });
+      cy.nodes().unselect();
+    };
+
+    const selectTarget = targetNode => {
+      targetNode.select();
+      targetNode.incomers().animate({ style: { lineColor: "red", targetArrowColor: "red" } });
+      targetNode.outgoers().edges().animate({ style: { lineColor: "darkcyan", targetArrowColor: "darkcyan" } });
+    };
+
+    const switchToTargetNode = targetNode => {
+      unseslectCurrent();
+      selectTarget(targetNode);
+      panIn(targetNode);
+    };
   
     cy.on('tap', 'node', function(event) {
-      // acts as advanceByButton for manually selected nodes
-      var target = event.target;
-      var current = cy.$(':selected');
+      const target = event.target;
+      console.log('tap', target.data());
+      const current = cy.$('node:selected');
       if(target.id() === current.id()) {
-        // window.open(target.data('url'), '_blank');
-        alert('double click');
+        window.open(target.data('link'), '_blank');
         return;
       }
-      cy.nodes().unselect();
-      target.select();
-      panIn(target); 
+      switchToTargetNode(target);
     });
 
     cy.on('tap', 'edge', function(event) {
-        panIn(event.target.target());
+      const edge = event.target.data();
+      console.log('selected before', cy.$('node:selected'));
+      const selectedNode = cy.$('node:selected').id() === edge.target ? cy.$id(edge.source) : cy.$id(edge.target);
+      selectedNode.trigger('tap');
+      console.log('selected after', cy.$('node:selected'));
     });
+
+
   
-    // Initialization: select first element to focus on.
-    var startNode = cy.$('node[id = "0"]');
-    // startNode.select();
-    panIn(startNode);
-  });
-  
+    document.getElementById('cy').addEventListener('dataavailable', function(e) {
+      const startNode = cy.$('node[id ="http://www.hasolidit.com/15-%d7%a2%d7%a6%d7%95%d7%aa-%d7%a1%d7%95%d7%9c%d7%99%d7%93%d7%99%d7%95%d7%aa-%d7%9c%d7%91%d7%a0%d7%99-20"]');
+      startNode.select();
+      cy.layout({
+        // name: 'dagre',
+        name: 'circle',
+        fit: false,
+        // nodeDimensionsIncludeLabels: true,
+        avoidOverlap: true,
+        avoidOverlapPadding: 80,
+      }).run();
+      cy.nodeHtmlLabel([{
+        'query': 'node',
+        'valign': 'center',
+        tpl: function(data) {
+          return `<div class="cy-title" dir="rtl"> ${data.title} </div>`;
+        }
+      }]);
+    
+      cy.autolock(true);
+      panIn(startNode);
+    });
+
+    const autoLock = document.getElementById('auto-lock');
+    autoLock.addEventListener('click', () => {
+      if(cy.autolock()) {
+        autoLock.value = 'Lock in place';
+        cy.autolock(false);
+
+      } else {
+        autoLock.value = 'Unlock';
+        cy.autolock(true);
+      }
+    });
+
+    document.getElementById('randomize').addEventListener('click', () => {
+      cy.layout({
+        name: 'random',
+        fit: false,
+        avoidOverlap: true,
+        avoidOverlapPadding: 80,
+      }).run();
+    });
+    
+}); 

@@ -4,10 +4,13 @@
   "description": "",
   "main": "index.js",
   "dependencies": {
+    "axios": "^0.19.2",
+    "cheerio": "^1.0.0-rc.3",
     "cytoscape": "^3.14.0",
+    "cytoscape-dagre": "^2.2.2",
     "cytoscape-node-html-label": "^1.2.0",
-    "jshint": "^2.11.0",
-    "micromodal": "^0.4.2"
+    "mongodb": "^3.5.5",
+    "semaphore": "^1.1.0"
   },
   "devDependencies": {},
   "scripts": {
