@@ -1,4 +1,4 @@
-/*jshint esversion: 6 */
+/*jshint esversion: 8 */
 const MongoClient = require('mongodb').MongoClient;
 
 const dbUrl = "mongodb://localhost:27017/";
